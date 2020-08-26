@@ -179,13 +179,19 @@ a {
   position: absolute;
   left: 0;
   right: 0;
+  transition: all 0.2s linear;
 }
 .menu-list__link:hover {
   color: #fce38a;
+  transition: all 0.2s linear;
 }
 .navigation_padding-top {
   padding-top: 25px;
   margin-bottom: 165px;
+}
+.modal-btn:hover {
+  border: 3px solid#fce38a;
+  color: #fce38a;
 }
 .modal-btn {
   display: block;
@@ -235,4 +241,189 @@ a {
   width: 60px;
   margin: auto;
   margin-top: 40px;
+  border-radius: 60px/60px;
+}
+.services__list-icon-wrapper {
+  width: 80px;
+}
+.services__item-name {
+  width: 290px;
+  font-size: 14px;
+  color: #333333;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+.services__item-text {
+  width: 290px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+  font-weight: 400;
+  font-family: "Roboto";
+  padding-bottom: 95px;
+}
+.teams__description {
+  margin: 0 auto;
+  width: 960px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+  font-weight: 400;
+  font-family: "Roboto";
+  text-align: center;
+  padding-bottom: 90px;
+}
+.teams__list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.teams__list-name {
+  font-size: 14px;
+  color: #333333;
+  font-weight: 700;
+  font-family: "Montserrat";
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.teams__list-prof {
+  font-size: 15px;
+  line-height: 24px;
+  color: #999999;
+  font-weight: 300;
+  font-style: italic;
+  font-family: "Roboto";
+  text-align: center;
+}
+.teams__div-overlay-list {
+  display: flex;
+}
+.teams__div-overlay-list-li {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(252, 227, 138);
+  transition: all 0.2s linear;
+}
+.teams__div-overlay-list-li:not(:last-child) {
+  border-right: solid 1px rgb(243, 129, 129);
+}
+.teams__list-icon {
+  width: 26px;
+  height: 26px;
+  fill: #f38181;
+}
+.teams__div-overlay-list-li:hover .teams__list-icon {
+  fill: white;
+  transition: all 0.2s linear;
+}
+.teams__div-overlay-list-li:hover {
+  background-color: #f38181;
+}
+.teams__div {
+  position: relative;
+}
+.teams__div-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 380px;
+  height: 470px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: linear-gradient(
+    0deg,
+    rgba(252, 227, 138, 0.8) 0%,
+    rgba(243, 129, 129, 0.8) 100%
+  );
+  box-shadow: 10px 10px 0 0 rgb(149, 225, 211);
+  display: none;
+  transition: all 0.2s linear;
+}
+.teams__item:hover .teams__div-overlay {
+  display: flex;
+  transform: translate(-10px, -10px);
+}
+.teams {
+  padding-bottom: 80px;
+}
+.footer__text {
+  font-size: 14px;
+  color: #333333;
+  font-weight: 400;
+  font-family: "Montserrat";
+  text-align: left;
+}
+.footer__link {
+  font-size: 14px;
+  color: #f38181;
+  font-weight: 400;
+  font-family: "Montserrat";
+  text-align: center;
+}
+.contact-form__input {
+  font-family: "Roboto";
+  display: block;
+  box-sizing: border-box;
+  width: 230px;
+  height: 40px;
+  border: 1px solid rgb(231, 231, 231);
+  font-size: 20px;
+}
+.form-div {
+  display: flex;
+}
+.form-btn {
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  padding-left: 10px;
+  font-family: "Montserrat";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  background-color: rgb(149, 225, 211);
+}
+.contact-form__input::-webkit-input-placeholder {
+  font-size: 15px;
+  padding-left: 10px;
+  font-family: "Roboto";
+  color: rgb(204, 204, 204);
+  font-style: italic;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.contact-form__input::-moz-placeholder {
+  font-size: 15px;
+  font-family: "Roboto";
+  color: rgb(204, 204, 204);
+  font-style: italic;
+  text-align: left;
+}
+.contact-form__input::placeholder {
+  padding-left: 10px;
+}
+.contact-form__input {
+  padding-left: 10px;
+}
+.container_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.footer {
+  margin: 0 auto;
+  border-top: solid 1px rgb(229, 229, 229);
+  max-width: 1200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
