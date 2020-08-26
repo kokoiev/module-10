@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* roboto-300italic - latin */
 @font-face {
   font-family: "Roboto";
@@ -56,7 +63,6 @@
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -73,6 +79,20 @@ a {
 .header {
   background-position: center;
   background-size: cover;
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(252, 227, 138, 0.8)),
+      to(rgba(243, 129, 129, 0.8))
+    ),
+    url(../images/bgrheader.png);
+  background-image: -o-linear-gradient(
+      bottom,
+      rgba(252, 227, 138, 0.8) 0%,
+      rgba(243, 129, 129, 0.8) 100%
+    ),
+    url(../images/bgrheader.png);
   background-image: linear-gradient(
       0deg,
       rgba(252, 227, 138, 0.8) 0%,
@@ -80,7 +100,9 @@ a {
     ),
     url(../images/bgrheader.png);
 }
-@media (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-resolution: 192dpi) {
   .header {
     background-image: url(../images/bgrheader@2x.png);
   }
@@ -93,13 +115,23 @@ a {
   line-height: 1.2;
 }
 .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
   align-items: baseline;
 }
 .menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 623px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .menu-list__link {
@@ -111,17 +143,28 @@ a {
   text-transform: uppercase;
 }
 .menu-list__item {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 .teams__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .services__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .services__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 380px;
 }
@@ -179,10 +222,14 @@ a {
   position: absolute;
   left: 0;
   right: 0;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 .menu-list__link:hover {
   color: #fce38a;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 .navigation_padding-top {
@@ -275,7 +322,11 @@ a {
   padding-bottom: 90px;
 }
 .teams__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   text-align: center;
 }
@@ -299,15 +350,25 @@ a {
   text-align: center;
 }
 .teams__div-overlay-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .teams__div-overlay-list-li {
   width: 56px;
   height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: rgb(252, 227, 138);
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 .teams__div-overlay-list-li:not(:last-child) {
@@ -320,6 +381,8 @@ a {
 }
 .teams__div-overlay-list-li:hover .teams__list-icon {
   fill: white;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 .teams__div-overlay-list-li:hover {
@@ -329,25 +392,50 @@ a {
   position: relative;
 }
 .teams__div-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 380px;
   height: 470px;
   position: absolute;
   top: 0px;
   left: 0px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgba(252, 227, 138, 0.8)),
+    to(rgba(243, 129, 129, 0.8))
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    rgba(252, 227, 138, 0.8) 0%,
+    rgba(243, 129, 129, 0.8) 100%
+  );
   background-image: linear-gradient(
     0deg,
     rgba(252, 227, 138, 0.8) 0%,
     rgba(243, 129, 129, 0.8) 100%
   );
+  -webkit-box-shadow: 10px 10px 0 0 rgb(149, 225, 211);
   box-shadow: 10px 10px 0 0 rgb(149, 225, 211);
   display: none;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 .teams__item:hover .teams__div-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-transform: translate(-10px, -10px);
+  -ms-transform: translate(-10px, -10px);
   transform: translate(-10px, -10px);
 }
 .teams {
@@ -370,6 +458,7 @@ a {
 .contact-form__input {
   font-family: "Roboto";
   display: block;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 230px;
   height: 40px;
@@ -377,6 +466,8 @@ a {
   font-size: 20px;
 }
 .form-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .form-btn {
@@ -409,6 +500,12 @@ a {
   font-style: italic;
   text-align: left;
 }
+.contact-form__input:-ms-input-placeholder {
+  padding-left: 10px;
+}
+.contact-form__input::-ms-input-placeholder {
+  padding-left: 10px;
+}
 .contact-form__input::placeholder {
   padding-left: 10px;
 }
@@ -416,8 +513,14 @@ a {
   padding-left: 10px;
 }
 .container_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
   align-items: baseline;
 }
 .footer {
