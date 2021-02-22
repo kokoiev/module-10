@@ -167,6 +167,10 @@ a {
   display: -ms-flexbox;
   display: flex;
   width: 380px;
+  margin-bottom: 95px;
+}
+.services__list-item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
 }
 .container {
   width: 1200px;
@@ -233,7 +237,6 @@ a {
   transition: all 0.2s linear;
 }
 .navigation_padding-top {
-  padding-top: 25px;
   margin-bottom: 165px;
 }
 .modal-btn:hover {
@@ -256,8 +259,10 @@ a {
   cursor: pointer;
 }
 .header_padding {
+  padding-top: 25px;
   padding-bottom: 230px;
 }
+/* секция тайтл начало */
 .sections-title {
   font-size: 30px;
   color: #333333;
@@ -276,10 +281,6 @@ a {
   text-transform: none;
   margin-bottom: 20px;
 }
-.main_padding {
-  padding-top: 45px;
-  padding-bottom: 10px;
-}
 .sections-title::after {
   content: "";
   display: block;
@@ -289,6 +290,12 @@ a {
   margin: auto;
   margin-top: 40px;
   border-radius: 60px/60px;
+}
+
+/* секция тайтл конец */
+/* services section */
+.services {
+  padding-top: 45px;
 }
 .services__list-icon-wrapper {
   width: 80px;
@@ -308,7 +315,6 @@ a {
   color: #999999;
   font-weight: 400;
   font-family: "Roboto";
-  padding-bottom: 95px;
 }
 .teams__description {
   margin: 0 auto;
@@ -319,7 +325,7 @@ a {
   font-weight: 400;
   font-family: "Roboto";
   text-align: center;
-  padding-bottom: 90px;
+  margin-bottom: 90px;
 }
 .teams__list {
   display: -webkit-box;
@@ -337,8 +343,8 @@ a {
   font-family: "Montserrat";
   text-align: center;
   text-transform: uppercase;
-  padding-top: 30px;
-  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .teams__list-prof {
   font-size: 15px;
@@ -439,8 +445,10 @@ a {
   transform: translate(-10px, -10px);
 }
 .teams {
+  padding-top: 95px;
   padding-bottom: 80px;
 }
+/* footer */
 .footer__text {
   font-size: 14px;
   color: #333333;
